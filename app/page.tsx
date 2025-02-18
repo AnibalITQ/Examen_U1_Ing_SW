@@ -55,7 +55,7 @@ export default function SoftwareEngineeringConcepts() {
 
       <footer className="bg-gray-800 text-white py-8 mt-12">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2025 Conceptos de Ingeniería de Software. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Anibal Emilio Tirado Delado | Ingeniería de software.</p>
           <p className="mt-2">Diseñado con pasión por la ingeniería de software.</p>
         </div>
       </footer>
@@ -63,7 +63,15 @@ export default function SoftwareEngineeringConcepts() {
   )
 }
 
-function ConceptCard({ icon, title, description, content }) {
+
+interface ConceptCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  content: string;
+}
+
+function ConceptCard({ icon, title, description, content }: ConceptCardProps) {
   return (
     <Card className="transition-all duration-300 hover:shadow-lg">
       <CardHeader>
@@ -84,6 +92,7 @@ function ConceptCard({ icon, title, description, content }) {
         </Accordion>
       </CardContent>
     </Card>
-  )
+  );
 }
+
 
